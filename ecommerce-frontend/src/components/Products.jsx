@@ -8,7 +8,7 @@ function Products({ token }) {
   useEffect(() => {
     // Only fetch if authenticated (though our backend currently doesn't enforce it, the frontend can assume it)
     if (token) {
-      fetch("http://localhost:5000/api/products")
+      fetch("https://e-commerce-yfxe.onrender.com/api/products")
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch((err) => console.error("Failed to fetch products", err));
